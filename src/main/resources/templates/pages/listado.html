@@ -1,0 +1,26 @@
+<!doctype html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/plantilla}"
+>
+  <body>
+    <th:block layout:fragment="content">
+
+      <div class="page-header">
+        <h1 th:text="${pageTitle}">Listado</h1>
+        <a th:if="${newUrl != null}" th:href="@{${newUrl}}" class="btn btn-primary">
+          + Nuevo
+        </a>
+      </div>
+
+      <div th:replace="~{fragments/tabla :: TablaGenerica(
+        ${columnas},
+        ${filas},
+        ${editUrl},
+        ${deleteUrl}
+      )}"></div>
+
+    </th:block>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <div th:fragment="TablaGenerica(columnas, filas, UrlEditar, UrlEliminar)">
+      <table class="table">
+        <thead>
+          <tr>
+            <th th:each="col : ${columnas}" th:text="${col['label']}"></th>
+            <th th:if="${UrlEditar != null or UrlEliminar != null}">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="row : ${filas}">
+            <td th:each="col : ${columnas}" th:text="${row[col['key']]}"></td>
+            <td th:if="${UrlEditar != null or UrlEliminar != null}">
+              <a
+                th:if="${UrlEditar != null}"
+                th:href="@{${UrlEditar}(id=${row['id']})}"
+                class="btn btn-sm btn-edit">Editar</a>
+              <form
+                th:if="${UrlEliminar != null}"
+                th:action="@{${UrlEliminar}}"
+                method="post"
+                style="display:inline"
+                onsubmit="return confirm('¿Eliminar este registro?')">
+                <input type="hidden" name="id" th:value="${row['id']}"/>
+                <button type="submit" class="btn btn-sm btn-delete">Eliminar</button>
+              </form>
+            </td>
+          </tr>
+          <tr th:if="${#lists.isEmpty(filas)}">
+            <td th:colspan="${columnas.size() + 1}" class="empty-row">No hay registros.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+  <body>
+    <nav th:fragment="navbar" class="navbar">
+      <div class="navbar-brand">
+        <a th:href="@{/}">🛒 Supermercado</a>
+      </div>
+      <ul class="navbar-links">
+        <li sec:authorize="isAuthenticated()"><a th:href="@{/}"           th:classappend="${currentRequest.requestURI == '/'           ? 'active' : ''}">Inicio</a></li>
+        <li sec:authorize="isAuthenticated()"><a th:href="@{/categorias}" th:classappend="${currentRequest.requestURI.startsWith('/categorias') ? 'active' : ''}">Categorías</a></li>
+        <li sec:authorize="isAuthenticated()"><a th:href="@{/productos}"  th:classappend="${currentRequest.requestURI.startsWith('/productos')  ? 'active' : ''}">Productos</a></li>
+        <li sec:authorize="isAuthenticated()"><a th:href="@{/clientes}"   th:classappend="${currentRequest.requestURI.startsWith('/clientes')   ? 'active' : ''}">Clientes</a></li>
+        <li sec:authorize="isAuthenticated()"><a th:href="@{/proveedores}"th:classappend="${currentRequest.requestURI.startsWith('/proveedores')? 'active' : ''}">Proveedores</a></li>
+        <li sec:authorize="isAuthenticated()"><a th:href="@{/empleados}"  th:classappend="${currentRequest.requestURI.startsWith('/empleados')  ? 'active' : ''}">Empleados</a></li>
+        <li sec:authorize="isAuthenticated()"><a th:href="@{/ventas}"     th:classappend="${currentRequest.requestURI.startsWith('/ventas')     ? 'active' : ''}">Ventas</a></li>
+      </ul>
+      <div class="navbar-right" sec:authorize="isAuthenticated()">
+        <span class="navbar-user" sec:authentication="name"></span>
+        <a th:href="@{/logout}" class="btn-logout">Cerrar sesión</a>
+      </div>
+      <div class="navbar-right" sec:authorize="!isAuthenticated()">
+        <a th:href="@{/login}" class="btn-login">Iniciar sesión</a>
+      </div>
+    </nav>
+  </body>
+</html>

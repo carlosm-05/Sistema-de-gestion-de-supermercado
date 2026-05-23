@@ -1,0 +1,40 @@
+<!doctype html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/plantilla}"
+>
+  <body>
+    <th:block layout:fragment="content">
+
+      <div class="hero">
+        <h1>Supermercado</h1>
+        <p>Sistema de gestión de tienda</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" th:text="${totalProductos}">0</div>
+          <div class="stat-label">Productos</div>
+          <a th:href="@{/productos}" class="stat-link">Ver listado →</a>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" th:text="${totalClientes}">0</div>
+          <div class="stat-label">Clientes</div>
+          <a th:href="@{/clientes}" class="stat-link">Ver listado →</a>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" th:text="${totalVentas}">0</div>
+          <div class="stat-label">Ventas</div>
+          <a th:href="@{/ventas}" class="stat-link">Ver listado →</a>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" th:text="${totalEmpleados}">0</div>
+          <div class="stat-label">Empleados</div>
+          <a th:href="@{/empleados}" class="stat-link">Ver listado →</a>
+        </div>
+      </div>
+
+    </th:block>
+  </body>
+</html>

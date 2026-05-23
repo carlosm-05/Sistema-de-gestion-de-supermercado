@@ -1,0 +1,76 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:Proyecto_Vet >----------------------
+[INFO] Building Proyecto_Vet 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.5:run (default-cli) > test-compile @ Proyecto_Vet >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Proyecto_Vet ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 8 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ Proyecto_Vet ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 47 source files with javac [debug release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Proyecto_Vet ---
+[INFO] skip non existing resourceDirectory C:\MiTienda\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ Proyecto_Vet ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.5:run (default-cli) < test-compile @ Proyecto_Vet <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.5:run (default-cli) @ Proyecto_Vet ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-05-22T17:56:16.780-05:00  INFO 22176 --- [Proyecto_Vet] [           main] c.e.Proyecto_Vet.ProyectoVetApplication  : Starting ProyectoVetApplication using Java 21.0.9 with PID 22176 (C:\MiTienda\target\classes started by PC in C:\MiTienda)
+2026-05-22T17:56:16.782-05:00  INFO 22176 --- [Proyecto_Vet] [           main] c.e.Proyecto_Vet.ProyectoVetApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-05-22T17:56:18.155-05:00  INFO 22176 --- [Proyecto_Vet] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-22T17:56:18.250-05:00  INFO 22176 --- [Proyecto_Vet] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 8 JPA repository interfaces.
+2026-05-22T17:56:19.495-05:00  INFO 22176 --- [Proyecto_Vet] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-05-22T17:56:19.509-05:00  INFO 22176 --- [Proyecto_Vet] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-22T17:56:19.510-05:00  INFO 22176 --- [Proyecto_Vet] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-22T17:56:19.599-05:00  INFO 22176 --- [Proyecto_Vet] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-22T17:56:19.601-05:00  INFO 22176 --- [Proyecto_Vet] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2485 ms
+2026-05-22T17:56:19.638-05:00  INFO 22176 --- [Proyecto_Vet] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-22T17:56:19.952-05:00  INFO 22176 --- [Proyecto_Vet] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:vetdb user=SA
+2026-05-22T17:56:19.954-05:00  INFO 22176 --- [Proyecto_Vet] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-22T17:56:19.969-05:00  INFO 22176 --- [Proyecto_Vet] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:vetdb'
+2026-05-22T17:56:20.123-05:00  INFO 22176 --- [Proyecto_Vet] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-22T17:56:20.285-05:00  INFO 22176 --- [Proyecto_Vet] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-22T17:56:20.354-05:00  INFO 22176 --- [Proyecto_Vet] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-22T17:56:20.734-05:00  INFO 22176 --- [Proyecto_Vet] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-22T17:56:20.808-05:00  WARN 22176 --- [Proyecto_Vet] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-22T17:56:22.189-05:00  INFO 22176 --- [Proyecto_Vet] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-22T17:56:22.282-05:00  INFO 22176 --- [Proyecto_Vet] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-22T17:56:23.152-05:00  WARN 22176 --- [Proyecto_Vet] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-22T17:56:23.546-05:00  INFO 22176 --- [Proyecto_Vet] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@32eeef08, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@bbf361a, org.springframework.security.web.context.SecurityContextHolderFilter@65192f16, org.springframework.security.web.header.HeaderWriterFilter@153cf928, org.springframework.web.filter.CorsFilter@46cb800b, org.springframework.security.web.authentication.logout.LogoutFilter@29682244, com.example.Proyecto_Vet.security.JwtFilter@6447dc25, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76cad511, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ff52a71, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@505a48a2, org.springframework.security.web.session.SessionManagementFilter@49dacc93, org.springframework.security.web.access.ExceptionTranslationFilter@2c56e044, org.springframework.security.web.access.intercept.AuthorizationFilter@657e7e8]
+2026-05-22T17:56:23.909-05:00  INFO 22176 --- [Proyecto_Vet] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-05-22T17:56:23.916-05:00  INFO 22176 --- [Proyecto_Vet] [           main] c.e.Proyecto_Vet.ProyectoVetApplication  : Started ProyectoVetApplication in 7.759 seconds (process running for 8.626)
+? Datos cargados. Abre: http://localhost:8080
+   Usuario: admin / admin123
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  22:13 min
+[INFO] Finished at: 2026-05-22T18:18:17-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.2.5:run (default-cli) on project Proyecto_Vet: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
